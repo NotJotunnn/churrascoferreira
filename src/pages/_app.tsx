@@ -1,7 +1,7 @@
 import { AppProps } from "next/app";
 import "../styles/globals.css";
 
-import SuperHeader from "../components/superHeader";
+import SuperHeader from "../components/SuperHeader";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SubFooter from "../components/SubFooter";

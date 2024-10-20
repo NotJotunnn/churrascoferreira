@@ -9,7 +9,7 @@ const SideBar = () => {
   const { AvailableTime } = useDataState() as DataContext
 
   return (
-    <div className={`flex ${showSidebar ? "animate-slideFromRight" : "animate-slideToRight"} flex-col justify-center items-center fixed top-0 left-0 w-screen min-h-screen gap-[100px] z-40 bg-[#333]`}>
+    <div className={`flex ${showSidebar ? "animate-slideFromRight" : "animate-slideToRight"} lg:translate-x-[100vw] flex-col justify-center items-center fixed top-0 left-0 w-screen min-h-screen gap-[100px] z-40 bg-[#333]`}>
 
       <Image src={Logo} width={115} height={100} alt="Logo"/>
 

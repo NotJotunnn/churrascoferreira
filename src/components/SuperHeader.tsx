@@ -1,7 +1,12 @@
+import { useDataState } from "../contexts/Data";
+import { DataContext } from "../utils/interfaces";
+
 const SuperHeader = () => {
+  const { AvailableTime, contactMail, contactPhone } = useDataState() as DataContext
+
   return (
-    <div className="bg-[#222] text-white lg:flex md:hidden sm:hidden justify-center items-center w-screen">
-      <ul className="flex gap-10 lg:w-[1080px] md:w-full h-10">
+    <div className="bg-[#222] text-white hidden lg:flex justify-center items-center w-screen">
+      <ul className="flex gap-10 lg:max-w-content lg:w-content px-4 py-2">
         <li className="flex justify-center items-center gap-1 text-[14px]">
           <svg
             width="10"
@@ -15,7 +20,7 @@ const SuperHeader = () => {
               fill="white"
             />
           </svg>
-          +55 (61) 99999-9999
+          {contactPhone}
         </li>
         <li className="flex justify-center items-center gap-1 text-[14px]">
           <svg
@@ -33,7 +38,7 @@ const SuperHeader = () => {
               strokeLinejoin="round"
             />
           </svg>
-          Seg-Sex 12:00 - 22:00 / Sab-Dom 14:00 - 18:00
+          {AvailableTime.onWeek} / {AvailableTime.onWeekEnd}
         </li>
         <li className="ms-auto flex justify-center items-center gap-1 text-[14px]">
           <svg
@@ -51,7 +56,7 @@ const SuperHeader = () => {
               strokeLinejoin="round"
             />
           </svg>
-          mail.mail@mail.com
+          {contactMail}
         </li>
       </ul>
     </div>

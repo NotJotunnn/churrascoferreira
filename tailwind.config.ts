@@ -26,13 +26,15 @@ const config: Config = {
       },
       keyframes: {
         slideFromRight: {
-          '0%': { translate: '100vw' },
-          '100%': { translate: '0' },
+          '0%': { 
+            translate: '100vw',
+            opacity: '0',
+          },
+          '100%': {
+            translate: '0vw',
+            opacity: '1',
+          },
         },
-        slideToRight: {
-          '0%': { translate: '0' },
-          '100%': { translate: '100vw' },
-        }
       },
       animation: {
         slideFromRight: 'slideFromRight 400ms ease-in-out 1 forwards',

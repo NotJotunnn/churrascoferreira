@@ -1,10 +1,13 @@
-const CTABtn = ({ props }: { props: { social: string } }) => {
-  const { social } = props
+const CTABtn = ({ props }: { props: { social: string, background: string } }) => {
+  const { social, background } = props
 
   // TODO: Connect actual socials
 
   return (
-    <button className="text-white bg-accent w-fit px-6 py-2 rounded-2xl flex justify-center items-center gap-2 hover:brightness-50 shadow-md shadow-[#00000070] hover:shadow-none transition-shadow duration-400">
+    <button className="text-white w-fit px-6 py-2 rounded-2xl flex justify-center items-center gap-2 hover:brightness-50 shadow-md shadow-[#00000070] hover:shadow-none transition-shadow duration-400"
+    style={{
+        backgroundColor: background.startsWith('--') ? `var(${background})` : 'black',
+      }}>
       {social == 'WhatsApp' && <svg width="25" height="25" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M15.8676 8.68809C15.8676 12.6531 12.6534 15.8674 8.68834 15.8674C7.176 15.8674 5.77287 15.3998 4.61567 14.6012L2.1617 15.2147L2.80475 12.8033C1.98821 11.638 1.50903 10.219 1.50903 8.68809C1.50903 4.72307 4.72332 1.50879 8.68834 1.50879C12.6534 1.50879 15.8676 4.72307 15.8676 8.68809Z" fill="transparent"/>
         <path fillRule="evenodd" clipRule="evenodd" d="M8.68835 17.0642C13.3142 17.0642 17.0642 13.3142 17.0642 8.68835C17.0642 4.0625 13.3142 0.3125 8.68835 0.3125C4.0625 0.3125 0.3125 4.0625 0.3125 8.68835C0.3125 10.1906 0.707958 11.6004 1.40045 12.8194L0.3125 17.0642L4.6888 16.0494C5.87728 16.6965 7.23988 17.0642 8.68835 17.0642ZM8.68835 15.7756C12.6025 15.7756 15.7756 12.6025 15.7756 8.68835C15.7756 4.77417 12.6025 1.60109 8.68835 1.60109C4.77417 1.60109 1.60109 4.77417 1.60109 8.68835C1.60109 10.1996 2.07412 11.6004 2.8802 12.7508L2.24539 15.1313L4.6679 14.5257C5.81027 15.314 7.1954 15.7756 8.68835 15.7756Z" fill="white"/>

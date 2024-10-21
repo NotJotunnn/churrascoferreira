@@ -9,17 +9,15 @@ const Footer = () => {
   const { AvailableTime, contactMail, contactPhone } = useDataState() as DataContext
   return (
 
-    <footer className="bg-[#333] py-6 hidden lg:flex justify-center items-center">
-      <div className="flex lg:w-content md:w-full md:px-4 justify-between">
-        <Link href='/'>
-          <Image src={Logo} alt="Logo" width={115} height={100}/>
-        </Link>
+    <footer className="bg-[#333] py-6 hidden lg:flex justify-center items-center px-4">
+      <div className="flex lg:w-content md:w-full justify-between">
+        <Link href='/'><Image src={Logo} alt="Logo" width={115} height={100}/></Link>
 
         <div>
           <h3 className="text-lg font-bold mb-[10px]">Navegação</h3>
           <ul className="flex flex-col gap-y-[10px]">
-            <li className="text-sm cursor-pointer">Início</li>
-            <li className="text-sm cursor-pointer">Sobre</li>
+            <Link href={'/'}><li className="text-sm cursor-pointer">Início</li></Link>
+            <Link href={'/SobreNos'}><li className="text-sm cursor-pointer">Sobre</li></Link>
             <li className="text-sm cursor-pointer">Galeria</li>
             <li className="text-sm cursor-pointer">Serviços</li>
           </ul>

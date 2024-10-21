@@ -16,14 +16,14 @@ const Header = () => {
   }
 
   return (
-    <header className="w-screen py-2 flex justify-center items-center bg-[#333] sticky top-0 z-50">
-      <div className="lg:max-w-content lg:w-content w-full px-4 flex justify-between items-center h-full">
+    <header className="w-screen py-2 flex justify-center items-center bg-[#333] sticky top-0 z-50 px-4">
+      <div className="lg:max-w-content lg:w-content w-full flex justify-between items-center h-full">
         <Link className={`${showSidebar ? 'opacity-0 cursor-auto' : 'opacity-100 cursor-pointer'} transition-opacity duration-400`} href={'/'}><Image src={Logo} alt="logo do Churrascos Ferreira" width={60} height={55}/></Link>
 
         <nav className="lg:flex hidden gap-x-[45px] justify-center items-center">
           <ul className="flex gap-x-10">
-            <li className="text-[22px] cursor-pointer">Início</li>
-            <li className="text-[22px] cursor-pointer">Sobre</li>
+            <Link href="/"><li className="text-[22px] cursor-pointer">Início</li></Link>
+            <Link href={'/SobreNos'}><li className="text-[22px] cursor-pointer">Sobre</li></Link>
             <li className="text-[22px] cursor-pointer">Galeria</li>
             <li className="text-[22px] cursor-pointer">Serviços</li>
           </ul>

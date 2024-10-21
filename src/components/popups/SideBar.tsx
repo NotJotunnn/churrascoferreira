@@ -3,20 +3,29 @@ import { DataContext, PopUpContext } from "../../utils/interfaces";
 import Logo from '../../assets/Logo.svg'
 import Image from "next/image";
 import { useDataState } from "../../contexts/Data";
+import Link from "next/link";
 
 const SideBar = () => {
-  const { showSidebar } = usePopUpState() as PopUpContext
+  const { showSidebar, toggleShowSidebar } = usePopUpState() as PopUpContext
   const { AvailableTime } = useDataState() as DataContext
 
+  const handleClick = () => {
+    toggleShowSidebar()
+  }
+
   return (
-    <div className={`flex ${showSidebar ? "animate-slideFromRight" : "animate-slideToRight"} lg:translate-x-[100vw] flex-col justify-center items-center fixed top-0 left-0 w-screen min-h-screen gap-[100px] z-40 bg-[#333]`}>
+    <div className={`flex ${showSidebar ? "animate-slideFromRight" : "translate-x-[100vw]"} transition-transform duration-400 flex-col justify-center items-center fixed top-0 left-0 w-screen min-h-screen gap-[100px] z-40 bg-[#333]`}>
 
       <Image src={Logo} width={115} height={100} alt="Logo"/>
 
       <nav className="flex flex-col gap-[100px] justify-center items-center">
         <ul className="flex flex-col justify-center items-center gap-4">
-          <li className="text-[22px]">Início</li>
-          <li className="text-[22px]">Sobre</li>
+          <Link onClick={handleClick} href={'/'}>
+            <li className="text-[22px]">Início</li>
+          </Link>
+          <Link onClick={handleClick} href={'/SobreNos'}>
+            <li className="text-[22px]">Sobre</li>
+          </Link>
           <li className="text-[22px]">Galeria</li>
           <li className="text-[22px]">Serviços</li>
         </ul>

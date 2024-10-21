@@ -1,7 +1,7 @@
 import MenuCard from "./MenuCard";
-import Feijoada from '../../images/Feijoada.png'
-import Básico from '../../images/Básico.png'
-import Premium from '../../images/Premium.png'
+import Feijoada from '../../images/menu/Feijoada.png'
+import Básico from '../../images/menu/Básico.png'
+import Premium from '../../images/menu/Premium.png'
 
 const Menu = () => {
   return (

@@ -1,5 +1,5 @@
-const Hero = ({ props }: { props: { CTA: boolean, title: string, title2?: string } }) => {
-  const { CTA, title, title2 } = props
+const Hero = ({ props = { CTA: false, title: '', title2: '' } }: { props?: { CTA?: boolean, title?: string, title2?: string } }) => {
+  const { CTA = false, title = '', title2 = '' } = props;
 
   return (
     <div className="h-[80dvh] flex justify-center items-center text-center relative">
@@ -13,5 +13,5 @@ const Hero = ({ props }: { props: { CTA: boolean, title: string, title2?: string
     </div>
   );
 }
- 
+
 export default Hero;

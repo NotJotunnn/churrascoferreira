@@ -9,6 +9,10 @@
   margin: 0;
 }
 
+html.scrollOff {
+  overflow: hidden;
+}
+
 :root {
   --background: #DEDEDE;
   --foreground: #171717;

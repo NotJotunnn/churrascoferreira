@@ -1,3 +1,5 @@
+<p align="center"><img alt="logo do site" src="./src//assets/Logo.svg"/></p>
+
 # Churrasco Ferreira Website
 
 ## Tecnologias Utilizadas
@@ -11,10 +13,6 @@
   <img alt="React" src="https://img.shields.io/badge/react-07d3f9?style=for-the-badge">
   <img alt="NextJS" src="https://img.shields.io/badge/nextjs-ffffff?style=for-the-badge">
   <img alt="Typescript" src="https://img.shields.io/badge/typescript-377cc8?style=for-the-badge">
-  <!-- <br><span>Back-end:</span><br>
-  <img alt="Express" src="https://img.shields.io/badge/express-46525e?style=for-the-badge">
-  <img alt="Prisma" src="https://img.shields.io/badge/prisma-090a15?style=for-the-badge">
-  <img alt="PostgreSQL" src="https://img.shields.io/badge/postgresql-316091?style=for-the-badge"> -->
   <br><span>Integrações:</span><br>
   <img alt="Whatsapp" src="https://img.shields.io/badge/whatsapp-2ab540?style=for-the-badge">
   <img alt="Instagram" src="https://img.shields.io/badge/instagram-da2e79?style=for-the-badge">

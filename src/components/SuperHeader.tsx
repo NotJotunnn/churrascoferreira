@@ -1,11 +1,14 @@
+import { useRouter } from "next/router";
 import { useDataState } from "../contexts/Data";
 import { DataContext } from "../utils/interfaces";
 
 const SuperHeader = () => {
   const { AvailableTime, contactMail, contactPhone } = useDataState() as DataContext
 
+  const router = useRouter()
+
   return (
-    <div className="bg-[#222] text-white hidden lg:flex justify-center items-center w-screen">
+    <div className={`${router.pathname.includes('LinkTree') ? 'hidden' : 'lg:flex hidden'} bg-[#222] text-white justify-center items-center w-screen`}>
       <ul className="flex gap-10 lg:max-w-content lg:w-content px-4 py-2">
         <li className="flex justify-center items-center gap-1 text-[14px]">
           <svg

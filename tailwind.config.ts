@@ -35,10 +35,20 @@ const config: Config = {
             opacity: '1',
           },
         },
+        showUp: {
+          '0%': { 
+            translate: '0 20dvh',
+            opacity: '0',
+          },
+          '100%': {
+            translate: '0 0dvh',
+            opacity: '1',
+          },
+        },
       },
       animation: {
         slideFromRight: 'slideFromRight 400ms ease-in-out 1 forwards',
-        slideToRight: 'slideToRight 400ms ease-in-out 1 forwards',
+        showUp: 'showUp 400ms ease-out 1 forwards',
       },
     },
   },

@@ -9,7 +9,7 @@ import Image from "next/image";
 const Depoimentos = () => {
   return (
     <div className="bg-[#222] text-white flex flex-col items-center text-center py-12 px-4 relative overflow-hidden">
-      <h2 className="text-4xl mb-4">Empresas que confiam no nosso trabalho</h2>
+      <h2 className="text-4xl font-semibold mb-4">Empresas que confiam no nosso trabalho</h2>
       <p className="text-lg mb-10">Veja abaixo alguns dos nossos clientes parceiros</p>
 
       <div className="flex flex-col items-center z-10 gap-5">

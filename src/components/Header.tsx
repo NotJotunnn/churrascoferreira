@@ -19,7 +19,7 @@ const Header = () => {
   }
 
   return (
-    <header className={`${router.pathname.includes('LinkTree') ? 'hidden' : 'flex'} w-screen py-2 justify-center items-center bg-[#333] sticky top-[-1px] z-50 px-4`}>
+    <header className={`${router.pathname.includes('LinkTree') ? 'hidden' : 'flex'} w-screen py-2 justify-center items-center bg-[#333] sticky top-[-1px] z-40 px-4`}>
       <div className="lg:max-w-content lg:w-content w-full flex justify-between items-center h-full">
         <Link className={`${showSidebar ? 'opacity-0 cursor-auto' : 'opacity-100 cursor-pointer'} transition-opacity duration-400`} href={'/'}><Image src={Logo} alt="logo do Churrascos Ferreira" width={60} height={55}/></Link>
 

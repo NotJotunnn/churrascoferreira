@@ -1,7 +1,7 @@
 import CTABtn from "./CTABtn";
 
-const CTA = ({ props }: { props: { background: string, text: string, text2?: string, social: string } }) => {
-  const { background = '--accent3', text= 'Carregando...', text2= '', social = 'Whatsapp' } = props
+const CTA = ({ props }: { props: { background: string, text: string, text2?: string, social: "Instagram" | "WhatsApp" } }) => {
+  const { background = '--accent3', text= 'Carregando...', text2= '', social = 'WhatsApp' } = props
 
   return (
     <div className={`py-10 flex justify-center items-center text-center px-4`}

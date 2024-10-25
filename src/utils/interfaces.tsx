@@ -2,6 +2,11 @@ export type PopUpContext = {
   showSidebar: boolean;
   setShowSidebar: React.Dispatch<React.SetStateAction<boolean>>;
   toggleShowSidebar: () => void;
+  showImageViewer: boolean; 
+  setShowImageViewer: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleShowImageViewer: () => void;
+  currentImageIndex: number;
+  setCurrentImageIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export type DataContext = {

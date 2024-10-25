@@ -19,10 +19,10 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-bold mb-[10px]">Navegação</h3>
           <ul className="flex flex-col gap-y-[10px]">
-            <Link href={'/'}><li className="text-sm cursor-pointer">Início</li></Link>
-            <Link href={'/SobreNos'}><li className="text-sm cursor-pointer">Sobre</li></Link>
-            <li className="text-sm cursor-pointer">Galeria</li>
-            <li className="text-sm cursor-pointer">Serviços</li>
+            <li className="text-sm cursor-pointer"><Link href={'/'}>Início</Link></li>
+            <li className="text-sm cursor-pointer"><Link href={'/SobreNos'}>Sobre</Link></li>
+            <li className="text-sm cursor-pointer"><Link href={'/Galeria'}>Galeria</Link></li>
+            <li className="text-sm cursor-pointer"><Link href={'/Servicos'}>Serviços</Link></li>
           </ul>
         </div>
 

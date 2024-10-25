@@ -21,11 +21,9 @@ const SideBar = () => {
       <nav className="flex flex-col gap-[100px] justify-center items-center">
         <ul className="flex flex-col justify-center items-center gap-4">
           <li className="text-[22px]"><Link onClick={handleClick} href={'/'}>Início</Link></li>
-          <Link onClick={handleClick} href={'/SobreNos'}>
-            <li className="text-[22px]">Sobre</li>
-          </Link>
-          <li className="text-[22px]">Galeria</li>
-          <li className="text-[22px]">Serviços</li>
+            <li className="text-[22px]"><Link onClick={handleClick} href={'/SobreNos'}>Sobre</Link></li>
+          <li className="text-[22px]"><Link onClick={handleClick} href={'/Galeria'}>Galeria</Link></li>
+          <li className="text-[22px]"><Link onClick={handleClick} href={'/Servicos'}>Serviços</Link></li>
         </ul>
 
         <ul className="flex gap-x-[10px]">

@@ -25,7 +25,7 @@ const ImageViewer = ({ props }: { props: { index: number } }) => {
   return (
     <div className="fixed top-0 left-0 z-50 w-full h-screen flex justify-center gap-2 items-center backdrop-blur-sm">
       {image && <Image className="max-w-[30dvh] lg:max-w-[20%] h-auto z-10" src={image} alt="Post do Instagram" width={1080} height={1080}/>}
-      <div className="flex gap-2 absolute bottom-0 w-full">
+      <div className="flex items-end gap-2 absolute top-0 w-full h-[100dvh]">
         <button disabled={currentShownImageIndex == 0} onClick={() => handleImageChange(currentShownImageIndex - 1)} className="z-10 h-20 w-[50%] bg-white text-black disabled:text-[#00000050] text-4xl" >&lt;</button>
         <button disabled={currentShownImageIndex == (Gallery.length - 1)} onClick={() => handleImageChange(currentShownImageIndex + 1)} className="z-10 h-20 w-[50%] bg-white text-black disabled:text-[#00000050] text-4xl" >&gt;</button>
       </div>

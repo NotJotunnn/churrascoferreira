@@ -2,13 +2,13 @@ import Image from "next/image";
 import { usePopUpState } from "../../../contexts/Popup";
 import { PopUpContext } from "../../../utils/interfaces";
 
-const Post = ({ props }: { props: { image: string, index: number } }) => {
+const Post = ({ props = { image: '', index: 0 } }: { props: { image: string, index: number } }) => {
   const { image, index } = props
 
   const { setCurrentImageIndex, toggleShowImageViewer } = usePopUpState() as PopUpContext
 
   const handleClick = () => {
-    setCurrentImageIndex(index)
+    setCurrentImageIndex(index )
 
     toggleShowImageViewer()
   }

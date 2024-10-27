@@ -1,9 +1,10 @@
 import Image, { StaticImageData } from "next/image";
 import CTABtn from "../CTABtn";
+import { ReactNode } from "react";
 
-const SobreNosCard = ({ props }: { props: { image: StaticImageData, title: string, text: string, text2?: string, text3?: string, odd?: boolean } }) => {
+const SobreNosCard = ({ props, children }: { props: { image: StaticImageData, title: string, odd?: boolean }, children?: ReactNode }) => {
 
-  const { image, title, text, text2, text3, odd } = props
+  const { image, title, odd } = props
 
   return (
     <div className={`flex flex-col ${odd ? 'lg:flex-row' : 'lg:flex-row lg:odd:flex-row-reverse'} w-full items-center justify-center text-center lg:text-left gap-10 px-4`}>
@@ -11,10 +12,11 @@ const SobreNosCard = ({ props }: { props: { image: StaticImageData, title: strin
       <div className="max-w-[510px] gap-3 flex flex-col items-center lg:items-start">
         <h2 className="text-4xl font-semibold mb-3">{title}</h2>
         <div className="flex flex-col gap-2 text-sm">
-          {text ? <p>{text}</p> : <p className="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, reiciendis nam, in facere mollitia quo eum eaque omnis, consectetur fugiat accusamus aliquam. Tempora ducimus possimus cum cupiditate velit autem qui.
-          Fugit, doloremque! Quasi cum repellat consequuntur corrupti dolorum amet quam. Voluptatibus a blanditiis enim vitae, cum nostrum impedit dolores iste dolorem nisi accusamus similique et. Optio laborum culpa non consequatur.</p>}
-          {text2 && <p>{text2}</p>}
-          {text3 && <p className="mb-5">{text3}</p>}
+          {children ? children : <>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae optio hic corporis veritatis, nemo beatae dicta dolores praesentium, ducimus iure corrupti aut porro necessitatibus tempore ab veniam, tenetur quo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae optio hic corporis veritatis, nemo beatae dicta dolores praesentium, ducimus iure corrupti aut porro necessitatibus tempore ab veniam, tenetur quo sequi!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae optio hic corporis veritatis, nemo beatae dicta dolores praesentium, ducimus iure corrupti aut porro necessitatibus tempore ab veniam, tenetur quo sequi!</p>
+          </>}
         </div>
         <CTABtn props={{ social: 'WhatsApp', background: 'black' }}/>
       </div>

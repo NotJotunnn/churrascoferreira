@@ -24,6 +24,9 @@ const config: Config = {
       width: {
         'content': '67.5rem'
       },
+      maxWidth: {
+        'content': '67.5rem',
+      },
       keyframes: {
         slideFromRight: {
           '0%': { 
@@ -45,10 +48,32 @@ const config: Config = {
             opacity: '1',
           },
         },
+        showUp2: {
+          '0%': { 
+            translate: '-20dvh',
+            opacity: '0',
+          },
+          '100%': {
+            translate: '0dvh',
+            opacity: '1',
+          },
+        },
+        vanish: {
+          '0%': { 
+            translate: '0 0dvh',
+            opacity: '1',
+          },
+          '100%': {
+            translate: '0 -20dvh',
+            opacity: '0',
+          },
+        },
       },
       animation: {
         slideFromRight: 'slideFromRight 400ms ease-in-out 1 forwards',
         showUp: 'showUp 400ms ease-out 1 forwards',
+        vanish: 'vanish 400ms ease-out 1 forwards',
+        showUp2: 'showUp2 400ms ease-out 1 forwards',
       },
     },
   },

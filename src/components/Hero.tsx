@@ -1,11 +1,12 @@
-const Hero = ({ props = { CTA: false, title: '', title2: '' } }: { props?: { CTA?: boolean, title?: string, title2?: string } }) => {
-  const { CTA = false, title = '', title2 = '' } = props;
+import { ReactNode } from "react";
+
+const Hero = ({ props = { CTA: false }, children }: { props?: { CTA?: boolean }, children: ReactNode }) => {
+  const { CTA = false } = props;
 
   return (
     <div className="h-[80dvh] flex justify-center items-center text-center relative">
       <div className="lg:max-w-content lg:w-content flex flex-col justify-center items-center gap-y-12 z-10 px-4">
-        <h1 className="text-6xl font-bold text-white">{title}</h1>
-        {title2 && <h1 className="text-6xl mt-[-40px] font-bold text-white">{title2}</h1>}
+        <h1 className="text-6xl font-bold text-white">{children}</h1>
         {CTA && <button className="bg-accent rounded-2xl py-2 px-6 text-lg hover:bg-accent2 transition duration-">Veja mais</button>}
       </div>
 

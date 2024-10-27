@@ -16,20 +16,20 @@ const SideBar = () => {
   return (
     <div className={`flex ${showSidebar ? "animate-slideFromRight" : "translate-x-[100vw]"} transition-transform duration-400 flex-col justify-center items-center fixed top-0 left-0 w-screen min-h-screen gap-[100px] z-40 bg-[#333]`}>
 
-      <Image src={Logo} width={115} height={100} alt="Logo"/>
+      <Image className="w-32" src={Logo} width={115} height={100} alt="Logo"/>
 
       <nav className="flex flex-col gap-[100px] justify-center items-center">
         <ul className="flex flex-col justify-center items-center gap-4">
-          <li className="text-[22px]"><Link onClick={handleClick} href={'/'}>Início</Link></li>
-            <li className="text-[22px]"><Link onClick={handleClick} href={'/SobreNos'}>Sobre</Link></li>
-          <li className="text-[22px]"><Link onClick={handleClick} href={'/Galeria'}>Galeria</Link></li>
-          <li className="text-[22px]"><Link onClick={handleClick} href={'/Servicos'}>Serviços</Link></li>
+          <li className="text-[38px]"><Link onClick={handleClick} href={'/'}>Início</Link></li>
+            <li className="text-[38px]"><Link onClick={handleClick} href={'/SobreNos'}>Sobre</Link></li>
+          <li className="text-[38px]"><Link onClick={handleClick} href={'/Galeria'}>Galeria</Link></li>
+          <li className="text-[38px]"><Link onClick={handleClick} href={'/Servicos'}>Serviços</Link></li>
         </ul>
 
-        <ul className="flex gap-x-[10px]">
+        <ul className="flex gap-x-8">
             <li className="cursor-pointer">
               <Link href={socialLinks.facebook} rel="external" target="_blank">
-                <svg className="hover:text-[#0866ff] transition-colors duration-400" width="33" height="33" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <svg className="hover:text-[#0866ff] transition-colors duration-400" width="45" height="45" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="8.99453" cy="8.99453" r="8.99453"/>
                   <path d="M12.3442 11.7455L12.7437 9.20679H10.2443V7.56008C10.2443 6.86538 10.5928 6.18782 11.7123 6.18782H12.8493V4.02651C12.8493 4.02651 11.8179 3.85498 10.8322 3.85498C8.77278 3.85498 7.42799 5.07113 7.42799 7.2719V9.20679H5.13974V11.7455H7.42799V17.8829C7.88738 17.9532 8.35736 17.9892 8.83613 17.9892C9.3149 17.9892 9.78488 17.9532 10.2443 17.8829V11.7455H12.3442Z" fill="black"/>
                 </svg>
@@ -37,7 +37,7 @@ const SideBar = () => {
             </li>
             <li className="cursor-pointer">
               <Link href={socialLinks.instagram} rel="external" target="_blank">
-                <svg className="hover:text-[#d54370] transition-colors duration-400" width="33" height="33" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <svg className="hover:text-[#d54370] transition-colors duration-400" width="45" height="45" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <rect x="0.126343" y="0.237793" width="17.5132" height="17.5132" rx="6"/>
                   <path d="M13.2612 5.55436C13.2612 6.07252 12.8412 6.49256 12.323 6.49256C11.8049 6.49256 11.3848 6.07252 11.3848 5.55436C11.3848 5.0362 11.8049 4.61616 12.323 4.61616C12.8412 4.61616 13.2612 5.0362 13.2612 5.55436Z" fill="black"/>
                   <path fillRule="evenodd" clipRule="evenodd" d="M8.88293 12.1218C10.6101 12.1218 12.0103 10.7216 12.0103 8.99444C12.0103 7.26726 10.6101 5.86709 8.88293 5.86709C7.15574 5.86709 5.75558 7.26726 5.75558 8.99444C5.75558 10.7216 7.15574 12.1218 8.88293 12.1218ZM8.88293 10.8709C9.91924 10.8709 10.7593 10.0308 10.7593 8.99444C10.7593 7.95813 9.91924 7.11803 8.88293 7.11803C7.84662 7.11803 7.00652 7.95813 7.00652 8.99444C7.00652 10.0308 7.84662 10.8709 8.88293 10.8709Z" fill="black"/>
@@ -47,7 +47,7 @@ const SideBar = () => {
             </li>
             <li className="cursor-pointer">
               <Link href={socialLinks.whatsapp} rel="external" target="_blank">
-                <svg className="hover:text-[#2ab540] transition-colors duration-400" width="33" height="33" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <svg className="hover:text-[#2ab540] transition-colors duration-400" width="45" height="45" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M15.8676 8.68809C15.8676 12.6531 12.6534 15.8674 8.68834 15.8674C7.176 15.8674 5.77287 15.3998 4.61567 14.6012L2.1617 15.2147L2.80475 12.8033C1.98821 11.638 1.50903 10.219 1.50903 8.68809C1.50903 4.72307 4.72332 1.50879 8.68834 1.50879C12.6534 1.50879 15.8676 4.72307 15.8676 8.68809Z"/>
                   <path fillRule="evenodd" clipRule="evenodd" d="M8.68835 17.0642C13.3142 17.0642 17.0642 13.3142 17.0642 8.68835C17.0642 4.0625 13.3142 0.3125 8.68835 0.3125C4.0625 0.3125 0.3125 4.0625 0.3125 8.68835C0.3125 10.1906 0.707958 11.6004 1.40045 12.8194L0.3125 17.0642L4.6888 16.0494C5.87728 16.6965 7.23988 17.0642 8.68835 17.0642ZM8.68835 15.7756C12.6025 15.7756 15.7756 12.6025 15.7756 8.68835C15.7756 4.77417 12.6025 1.60109 8.68835 1.60109C4.77417 1.60109 1.60109 4.77417 1.60109 8.68835C1.60109 10.1996 2.07412 11.6004 2.8802 12.7508L2.24539 15.1313L4.6679 14.5257C5.81027 15.314 7.1954 15.7756 8.68835 15.7756Z" fill="black"/>
                   <path d="M6.59442 4.79946C6.39527 4.39947 6.08978 4.43488 5.78115 4.43488C5.2296 4.43488 4.36957 5.09555 4.36957 6.32511C4.36957 7.3328 4.81361 8.43587 6.30987 10.086C7.75389 11.6784 9.65123 12.5022 11.2264 12.4742C12.8015 12.4461 13.1256 11.0907 13.1256 10.6329C13.1256 10.43 12.9997 10.3288 12.913 10.3013C12.3762 10.0437 11.3862 9.56368 11.1609 9.4735C10.9357 9.38332 10.8181 9.5053 10.7449 9.57166C10.5407 9.76632 10.1357 10.34 9.9971 10.4691C9.85846 10.5981 9.65176 10.5328 9.56574 10.484C9.24921 10.357 8.39098 9.97526 7.70688 9.3121C6.86083 8.49196 6.81118 8.20979 6.65178 7.95861C6.52426 7.75767 6.61784 7.63439 6.66453 7.58051C6.84681 7.37018 7.09851 7.04545 7.21139 6.88408C7.32427 6.72271 7.23466 6.47771 7.18089 6.32511C6.94964 5.66883 6.75373 5.11946 6.59442 4.79946Z" fill="black"/>

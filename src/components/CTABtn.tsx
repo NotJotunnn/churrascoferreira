@@ -2,13 +2,17 @@ import Link from "next/link";
 import { useDataState } from "../contexts/Data";
 import { DataContext } from "../utils/interfaces";
 
-const CTABtn = ({ props }: { props: { social: "WhatsApp" | "Instagram", background: string } }) => {
+const CTABtn = ({ props, onclick }: { props: { social: "WhatsApp" | "Instagram", background: string }, onclick?: () => void }) => {
   const { social, background } = props
 
   const { socialLinks } = useDataState() as DataContext
 
+  const handleClick = () => {
+    if(onclick) onclick()
+  }
+
   return (
-    <Link href={social == 'WhatsApp' ? socialLinks.whatsapp : socialLinks.instagram} rel="external" target="_blank">
+    <Link onClick={handleClick} href={social == 'WhatsApp' ? socialLinks.whatsapp : socialLinks.instagram} rel="external" target="_blank">
       <button className="text-white w-fit max-h-[41px] px-6 py-2 rounded-2xl flex justify-center items-center gap-2 hover:brightness-75 shadow-md shadow-[#00000070] hover:shadow-none transition-shadow duration-400"
       style={{
           backgroundColor: background.startsWith('--') ? `var(${background})` : 'black',

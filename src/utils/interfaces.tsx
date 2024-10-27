@@ -14,6 +14,9 @@ export type DataContext = {
   contactMail: string;
   contactPhone: string;
   socialLinks: SocialsType;
+  selected: number;
+  autoRotationInterval: ReturnType<typeof setInterval> | null;
+  handleChangeSelected: (selectedNum: number) => void;
   setSocialLinks: React.Dispatch<React.SetStateAction<SocialsType>>;
   setAvailableTime: React.Dispatch<React.SetStateAction<{ onWeek: string, onWeekEnd: string }>>;
   setContactMail: React.Dispatch<React.SetStateAction<string>>;

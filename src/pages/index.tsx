@@ -8,26 +8,31 @@ export default function Home() {
   return (
     <div className="bg-[#555]">
       <Hero
-        props={{ CTA: true, title: "Churrasco", title2: "para toda família!" }}
-      />
+        props={{ CTA: true }}
+      >
+        Churrasco <br />
+        para toda família!
+      </Hero>
       <Menu />
       <CTA
         props={{
           background: "--accent3",
-          text: "Gostou do que viu?",
           social: "WhatsApp",
         }}
-      />
+      >
+        Gostou do que viu?
+      </CTA>
       <SobreNosCardGroup />
       <Depoimentos />
       <CTA
         props={{
           background: "--accent2",
-          text: "Gostou do que viu?",
-          text2: "Venha fazer parte da família!",
           social: "WhatsApp",
         }}
-      />
+      >
+        Gostou do que viu? <br />
+        Venha fazer parte da família!
+      </CTA>
     </div>
   );
 }
